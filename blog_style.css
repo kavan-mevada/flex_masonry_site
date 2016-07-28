@@ -50,8 +50,9 @@ article {
 	-moz-box-shadow: 0px 2px 18px 1px rgba(0,0,0,0.12);
 	box-shadow: 0px 2px 18px 1px rgba(0,0,0,0.12);
     background-color: white;
-	
+
 	transition: all 0.3s ease-out;
+  animation: slide-up .6s cubic-bezier(0.4, 0, 0.2, 1) 50ms backwards;
 }
 
 .portfolio-badge {
@@ -99,7 +100,7 @@ article {
 	height: auto;
     vertical-align: middle;
 }
-    
+
 .thumb-content {
     display: block;
     padding-left: 30px;
@@ -164,4 +165,15 @@ color {
     background: rgb(59, 196, 146) none repeat scroll 0% 0% / auto;
     padding: 5px 20px;
 	margin: 30px 0;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
